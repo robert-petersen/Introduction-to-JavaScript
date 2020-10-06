@@ -169,7 +169,7 @@ function game(shoot){
       computer = 2; //paper
     }
     else if(ran <= 1){
-      computer = 3; //scissorss
+      computer = 3; //scissorsss
     }
     if(shoot === "rock"){
       human = 1;
