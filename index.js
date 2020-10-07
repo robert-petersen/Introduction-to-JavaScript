@@ -37,7 +37,7 @@ var varOne = 2;
 var varTwo = 3;
 
 varOne = varTwo;
-console.log(varOne);
+// console.log(varOne);
 
 
 /*
@@ -51,7 +51,7 @@ Do the following:
    HINT: look up the Number method
 */
 var string2number = "1999";
-console.log(string2number * 1);
+// console.log(string2number * 1);
 
 
 
@@ -67,7 +67,7 @@ Do the following:
 function multiply(a, b){
     return a * b;
   }
-  console.log(multiply(5, 4));
+  // console.log(multiply(5, 4));
 
 
 
@@ -84,7 +84,7 @@ Do the following:
 function dogYears(age){
     return age * 7;
 }
-console.log(dogYears(26));
+// console.log(dogYears(26));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -141,7 +141,7 @@ function hungryDog(weight, age){
       }
     }
   }
-console.log(hungryDog(15, 1));
+// console.log(hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -158,19 +158,25 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(shoot){
-    var ran = Math.random();
-    var computer;
+let computer;
+
+function game(shoot, computer){
+    console.log(`shoot start val ${shoot}`);
+    console.log(`computer start val ${computer}`);
+    // computer = Math.floor((Math.random() * 3 + 1));
+    // console.log(computer);
+    // console.log(shoot);
+
     var human;
-    if(ran <= 1/3){
-      computer = 1; //rock
-    }
-    else if(ran <= 2/3){
-      computer = 2; //paper
-    }
-    else if(ran <= 1){
-      computer = 3; //scissorsss
-    }
+    // if(ran <= 1/3){
+    //   computer = 1; //rock
+    // }
+    // else if(ran <= 2/3){
+    //   computer = 2; //paper
+    // }
+    // else if(ran <= 1){
+    //   computer = 3; //scissorsss
+    // }
     if(shoot === "rock"){
       human = 1;
     }
@@ -180,11 +186,24 @@ function game(shoot){
     else if(shoot === "scissors"){
       human = 3;
     }
+
+    if(computer === "rock"){
+      computer = 1;
+    }
+    else if(computer === "paper"){
+      computer = 2;
+    }
+    else if(computer === "scissors"){
+      computer = 3;
+    }
+
+    console.log(human);
+
     if (computer === human){
-      return "it's a tie!";
+      return "it's a tie";
     }
     else if (human === 1 && computer === 3 || human === 2 && computer === 1 || human === 3 && computer === 2){
-      return "you won!";
+      return "you win!";
     }
     else if(computer === 1 && human === 3 || computer === 2 && human === 1 || computer === 3 && human === 2){
       return "you lose!"
